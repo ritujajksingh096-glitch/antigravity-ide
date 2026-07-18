@@ -7,6 +7,7 @@ export interface Medication {
   status: 'taken' | 'pending' | 'missed' | 'late';
   timeTaken?: string;
   category?: string;
+  slot?: string;
 }
 
 export interface Caregiver {
@@ -38,7 +39,8 @@ export const initialMedications: Medication[] = [
     instructions: 'Take with water',
     status: 'taken',
     timeTaken: '08:00 AM',
-    category: 'Blood Pressure'
+    category: 'Blood Pressure',
+    slot: 'A2'
   },
   {
     id: '2',
@@ -47,25 +49,38 @@ export const initialMedications: Medication[] = [
     time: '01:00 PM',
     instructions: 'Take with meal',
     status: 'pending',
-    category: 'Diabetes'
+    category: 'Diabetes',
+    slot: 'A1'
   },
   {
     id: '3',
-    name: 'Lisinopril',
-    dosage: '10mg',
-    time: '08:00 PM',
-    instructions: 'Take with water',
+    name: 'Multivitamin',
+    dosage: 'Daily Support',
+    time: '10:30 AM',
+    instructions: 'Take with food',
     status: 'pending',
-    category: 'Blood Pressure'
+    category: 'Vitamins',
+    slot: 'B1'
   },
   {
     id: '4',
+    name: 'Metformin',
+    dosage: '500mg',
+    time: '08:00 PM',
+    instructions: 'Take after dinner',
+    status: 'pending',
+    category: 'Diabetes',
+    slot: 'B2'
+  },
+  {
+    id: '5',
     name: 'Atorvastatin',
     dosage: '20mg',
     time: '09:00 PM',
     instructions: 'Before bedtime',
     status: 'pending',
-    category: 'Cholesterol'
+    category: 'Cholesterol',
+    slot: 'D1'
   }
 ];
 
