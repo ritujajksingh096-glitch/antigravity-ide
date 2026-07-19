@@ -1,5 +1,5 @@
 # 💊 PillMate — AI-Powered Smart Medication Companion
-> **The Smart AI-Powered Medication Companion for Indian Homes**  
+> **The Smart AI-Powered Medication Companion**  
 
 ---
 
