@@ -6,41 +6,34 @@ export const SignupSuccess: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex-1 flex flex-col justify-between p-6 bg-white">
-      <div className="text-center pt-8 space-y-2">
-        {/* Checkmark */}
-        <div className="flex justify-center">
-          <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center text-teal-600">
-            <CheckCircle2 className="w-8 h-8" />
+    <div className="h-screen w-full flex flex-col items-center justify-center p-6 bg-white overflow-y-auto no-scrollbar">
+      <div className="w-full max-w-sm text-center space-y-8 my-auto">
+        <div className="space-y-4">
+          {/* Checkmark */}
+          <div className="flex justify-center">
+            <div className="w-16 h-16 bg-teal-50 rounded-full flex items-center justify-center text-teal-600 shadow-sm border border-teal-100">
+              <CheckCircle2 className="w-10 h-10" />
+            </div>
+          </div>
+          
+          <div className="space-y-2">
+            <h2 className="text-2xl md:text-3xl font-black font-sans text-teal-900 tracking-tight leading-tight">
+              Account Created Successfully!
+            </h2>
+            <p className="text-sm text-slate-500 max-w-[290px] mx-auto leading-relaxed font-semibold">
+              Welcome to Pillmate! Let's set up your profile and link your health tracking devices.
+            </p>
           </div>
         </div>
-        
-        <h2 className="text-2xl font-bold font-sans text-teal-900 tracking-tight px-4">
-          Account Created Successfully!
-        </h2>
-        <p className="text-xs text-slate-500 max-w-[280px] mx-auto leading-relaxed">
-          Welcome to Pillmate! Let's set up your profile and link your health tracking devices.
-        </p>
-      </div>
 
-      {/* Illustration Card */}
-      <div className="my-auto py-4 flex justify-center">
-        <div className="w-full max-w-[280px] aspect-[4/3] rounded-3xl overflow-hidden shadow-lg border border-slate-100">
-          <img 
-            src="https://images.unsplash.com/photo-1581579438747-1dc8d1e0ca96?w=600" 
-            alt="Welcome to Pillmate" 
-            className="w-full h-full object-cover"
-          />
+        <div>
+          <button 
+            onClick={() => navigate('/user-type')} 
+            className="w-full bg-teal-600 hover:bg-teal-700 active:bg-teal-800 text-white font-bold py-3.5 px-6 rounded-2xl shadow-lg shadow-teal-100/50 transition-all text-sm"
+          >
+            Continue
+          </button>
         </div>
-      </div>
-
-      <div className="pb-6">
-        <button 
-          onClick={() => navigate('/user-type')} 
-          className="w-full bg-teal-600 hover:bg-teal-700 active:bg-teal-800 text-white font-semibold py-3.5 px-6 rounded-2xl shadow-lg shadow-teal-100 transition-all text-sm"
-        >
-          Continue
-        </button>
       </div>
     </div>
   );

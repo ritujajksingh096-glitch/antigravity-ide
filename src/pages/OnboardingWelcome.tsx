@@ -72,10 +72,10 @@ export const OnboardingWelcome: React.FC = () => {
 
         {/* Hero Illustration */}
         <div className="py-6 flex flex-col items-center">
-          <div className="w-full max-w-[240px] aspect-[4/3] rounded-3xl overflow-hidden shadow-lg shadow-slate-100 border border-slate-100">
+          <div className="w-full max-w-[280px] aspect-square rounded-3xl overflow-hidden shadow-xl shadow-slate-200/50 border border-slate-100">
             <img 
-              src="https://images.unsplash.com/photo-1581579438747-1dc8d1e0ca96?w=600" 
-              alt="Elderly couple taking care" 
+              src="/caregiver_hero.jpg" 
+              alt="Caregiver and patient with Pillmate Dispenser" 
               className="w-full h-full object-cover"
             />
           </div>

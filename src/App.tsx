@@ -24,6 +24,7 @@ import VoiceAssistant from './pages/VoiceAssistant';
 import VoiceVerified from './pages/VoiceVerified';
 import Profile from './pages/Profile';
 import NotificationAlert from './pages/NotificationAlert';
+import DispenserDetails from './pages/DispenserDetails';
 
 export const App: React.FC = () => {
   return (
@@ -60,6 +61,7 @@ export const App: React.FC = () => {
           <Route path="/voice-verified" element={<VoiceVerified />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/notification-alert" element={<NotificationAlert />} />
+          <Route path="/dispenser" element={<DispenserDetails />} />
 
           {/* Fallback route */}
           <Route path="*" element={<Navigate to="/" replace />} />

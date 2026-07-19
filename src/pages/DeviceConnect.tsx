@@ -79,7 +79,7 @@ export const DeviceConnect: React.FC = () => {
           <div className="space-y-4 pt-2">
             <div 
               onClick={() => setSelectedDevice('pillbox')}
-              className={`p-5 rounded-3xl border-2 cursor-pointer flex gap-4.5 items-center transition-all shadow-sm ${
+              className={`p-5 rounded-3xl border-2 cursor-pointer flex gap-4 items-center transition-all shadow-sm ${
                 selectedDevice === 'pillbox' 
                   ? 'border-teal-600 bg-white scale-[1.01] shadow-lg shadow-teal-500/5' 
                   : 'border-slate-200/60 bg-white/60 hover:bg-white hover:scale-[1.005]'
@@ -90,12 +90,12 @@ export const DeviceConnect: React.FC = () => {
               }`}>
                 <Box className="w-5.5 h-5.5" />
               </div>
-              <div className="flex-grow text-left">
+              <div className="flex-1 min-w-0 text-left">
                 <div className="flex justify-between items-center">
-                  <h3 className="text-sm font-black text-slate-800">Smart Pillbox</h3>
+                  <h3 className="text-sm sm:text-base font-black text-slate-800">Smart Pillbox</h3>
                   {selectedDevice === 'pillbox' && <CheckCircle2 className="w-4 h-4 text-teal-600" />}
                 </div>
-                <p className="text-[10px] md:text-xs text-slate-400 font-semibold mt-1 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-500 font-semibold mt-1 leading-relaxed">
                   Bluetooth link. Automatic dose logs on opening/closing lids.
                 </p>
               </div>
@@ -103,7 +103,7 @@ export const DeviceConnect: React.FC = () => {
 
             <div 
               onClick={() => setSelectedDevice('dispenser')}
-              className={`p-5 rounded-3xl border-2 cursor-pointer flex gap-4.5 items-center transition-all shadow-sm ${
+              className={`p-5 rounded-3xl border-2 cursor-pointer flex gap-4 items-center transition-all shadow-sm ${
                 selectedDevice === 'dispenser' 
                   ? 'border-teal-600 bg-white scale-[1.01] shadow-lg shadow-teal-500/5' 
                   : 'border-slate-200/60 bg-white/60 hover:bg-white hover:scale-[1.005]'
@@ -114,12 +114,12 @@ export const DeviceConnect: React.FC = () => {
               }`}>
                 <Settings className="w-5.5 h-5.5" />
               </div>
-              <div className="flex-grow text-left">
+              <div className="flex-1 min-w-0 text-left">
                 <div className="flex justify-between items-center">
-                  <h3 className="text-sm font-black text-slate-800">Automatic Dispenser</h3>
+                  <h3 className="text-sm sm:text-base font-black text-slate-800">Automatic Dispenser</h3>
                   {selectedDevice === 'dispenser' && <CheckCircle2 className="w-4 h-4 text-teal-600" />}
                 </div>
-                <p className="text-[10px] md:text-xs text-slate-400 font-semibold mt-1 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-500 font-semibold mt-1 leading-relaxed">
                   WiFi-enabled. Motor-driven rotating pill guide with phone alarms.
                 </p>
               </div>
@@ -130,7 +130,7 @@ export const DeviceConnect: React.FC = () => {
           {isPairing && (
             <div className="bg-teal-50/60 border border-teal-100/50 rounded-2xl p-4 flex items-center gap-3 animate-pulse shadow-sm max-w-sm mx-auto md:mx-0">
               <BluetoothSearching className="w-4.5 h-4.5 text-teal-600 animate-spin" />
-              <span className="text-[10px] md:text-xs font-bold text-teal-850">Searching for nearby Bluetooth devices...</span>
+              <span className="text-xs sm:text-sm font-extrabold text-teal-800">Searching for nearby Bluetooth devices...</span>
             </div>
           )}
         </div>
@@ -140,7 +140,7 @@ export const DeviceConnect: React.FC = () => {
           <button 
             onClick={handlePair} 
             disabled={isPairing}
-            className="w-full bg-teal-600 hover:bg-teal-700 active:bg-teal-800 disabled:bg-slate-300 text-white font-bold py-3.5 px-6 rounded-2xl shadow-lg shadow-teal-500/10 transition-all text-xs"
+            className="w-full bg-teal-600 hover:bg-teal-700 active:bg-teal-800 disabled:bg-slate-300 text-white font-bold py-3.5 px-6 rounded-2xl shadow-lg shadow-teal-500/10 transition-all text-sm"
           >
             {isPairing ? 'Connecting...' : 'Connect & Continue'}
           </button>
@@ -148,7 +148,7 @@ export const DeviceConnect: React.FC = () => {
           <button 
             onClick={() => navigate('/patient-profile')} 
             disabled={isPairing}
-            className="w-full text-xs font-bold text-slate-400 hover:text-slate-600 transition-colors block text-center"
+            className="w-full text-xs sm:text-sm font-extrabold text-slate-500 hover:text-slate-700 transition-colors block text-center"
           >
             Skip Device Connection
           </button>

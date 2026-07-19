@@ -74,17 +74,17 @@ export const Dashboard: React.FC = () => {
           {/* Search Header Bar */}
           <div 
             onClick={() => navigate('/search')}
-            className="flex items-center gap-2 px-4 py-3 bg-white border border-slate-200/60 rounded-2xl cursor-pointer text-slate-400 hover:text-slate-500 shadow-sm transition-all hover:border-slate-300"
+            className="flex items-center gap-2.5 px-5 py-3.5 bg-white border border-slate-200 rounded-2xl cursor-pointer text-slate-500 hover:text-slate-700 shadow-sm transition-all hover:border-slate-350"
           >
-            <SearchIcon className="w-4 h-4 text-slate-400" />
-            <span className="text-xs font-semibold">Search medications, medical records, or contacts...</span>
+            <SearchIcon className="w-5 h-5 text-slate-400" />
+            <span className="text-xs sm:text-sm font-bold">Search medications, medical records, or contacts...</span>
           </div>
 
           {/* Today's Schedule Timeline Grouped */}
-          <div className="bg-white p-5 rounded-3xl border border-slate-200/50 shadow-sm space-y-6">
-            <div className="flex justify-between items-center pb-2 border-b border-slate-100">
-              <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider">Today's Schedule</h4>
-              <span className="text-xs text-teal-600 font-extrabold bg-teal-50 px-2.5 py-1 rounded-md">
+          <div className="bg-white p-6 sm:p-8 rounded-[32px] border border-slate-200/80 shadow-[0_12px_36px_rgba(0,0,0,0.07)] space-y-6">
+            <div className="flex justify-between items-center pb-3 border-b border-slate-100">
+              <h4 className="text-xs sm:text-sm font-extrabold text-slate-500 uppercase tracking-wider">Today's Schedule</h4>
+              <span className="text-xs sm:text-sm text-teal-700 font-black bg-teal-50 border border-teal-100 px-3 py-1.5 rounded-xl">
                 {medications.length} Medications Loaded
               </span>
             </div>
@@ -94,9 +94,9 @@ export const Dashboard: React.FC = () => {
               
               {/* Morning Section */}
               {morning.length > 0 && (
-                <div className="space-y-3 relative">
+                <div className="space-y-3.5 relative">
                   <div className="absolute -left-[21px] top-1.5 w-3.5 h-3.5 rounded-full bg-amber-400 border-2 border-white shadow-sm" />
-                  <h5 className="text-[10px] font-bold text-slate-400 uppercase tracking-wider pl-1">Morning Schedule</h5>
+                  <h5 className="text-xs font-extrabold text-slate-500 uppercase tracking-wider pl-1.5">Morning Schedule</h5>
                   
                   <div className="space-y-2.5">
                     {morning.map(med => (
@@ -112,9 +112,9 @@ export const Dashboard: React.FC = () => {
 
               {/* Afternoon Section */}
               {afternoon.length > 0 && (
-                <div className="space-y-3 relative pt-1">
+                <div className="space-y-3.5 relative pt-1">
                   <div className="absolute -left-[21px] top-2.5 w-3.5 h-3.5 rounded-full bg-teal-500 border-2 border-white shadow-sm" />
-                  <h5 className="text-[10px] font-bold text-slate-400 uppercase tracking-wider pl-1">Afternoon Schedule</h5>
+                  <h5 className="text-xs font-extrabold text-slate-500 uppercase tracking-wider pl-1.5">Afternoon Schedule</h5>
                   
                   <div className="space-y-2.5">
                     {afternoon.map(med => (
@@ -130,9 +130,9 @@ export const Dashboard: React.FC = () => {
 
               {/* Evening Section */}
               {evening.length > 0 && (
-                <div className="space-y-3 relative pt-1">
+                <div className="space-y-3.5 relative pt-1">
                   <div className="absolute -left-[21px] top-2.5 w-3.5 h-3.5 rounded-full bg-indigo-500 border-2 border-white shadow-sm" />
-                  <h5 className="text-[10px] font-bold text-slate-400 uppercase tracking-wider pl-1">Evening Schedule</h5>
+                  <h5 className="text-xs font-extrabold text-slate-500 uppercase tracking-wider pl-1.5">Evening Schedule</h5>
                   
                   <div className="space-y-2.5">
                     {evening.map(med => (
@@ -206,7 +206,10 @@ export const Dashboard: React.FC = () => {
           )}
 
           {/* Quick Dispenser Connection Summary */}
-          <div className="bg-white p-5 rounded-3xl border border-slate-200/50 shadow-sm flex items-center justify-between">
+          <Link 
+            to="/dispenser" 
+            className="bg-white p-5 rounded-3xl border border-slate-200/50 shadow-sm flex items-center justify-between hover:border-teal-600/30 hover:shadow-md hover:scale-[1.005] active:scale-[0.995] transition-all block text-left"
+          >
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center">
                 <Pill className="w-5 h-5" />
@@ -217,34 +220,34 @@ export const Dashboard: React.FC = () => {
                 <p className="text-[10px] text-teal-600 font-bold">{isDispenserConnected ? 'WiFi Linked • 95% Battery' : 'Not Connected'}</p>
               </div>
             </div>
-            <Link to="/profile" className="text-slate-300 hover:text-slate-500 transition-colors p-1">
+            <div className="text-slate-300 hover:text-teal-600 transition-colors p-1">
               <ChevronRight className="w-5 h-5" />
-            </Link>
-          </div>
+            </div>
+          </Link>
 
           {/* Floating Voice Assistant Banner */}
           <div 
             onClick={() => navigate('/voice-assistant')}
-            className="bg-gradient-to-r from-teal-950 via-slate-955 to-teal-955 text-white p-5 rounded-[24px] flex items-center justify-between cursor-pointer hover:scale-[1.01] transition-all shadow-lg border border-teal-500/10 shadow-teal-950/10"
+            className="bg-teal-600 text-white p-5 rounded-[24px] flex items-center justify-between cursor-pointer hover:bg-teal-700 hover:scale-[1.01] active:scale-[0.99] transition-all shadow-md border border-teal-500/20 shadow-teal-600/10"
           >
             <div className="flex items-center gap-3.5 min-w-0">
-              <div className="w-11 h-11 bg-teal-500/15 border border-teal-500/30 rounded-2xl flex items-center justify-center text-teal-400 flex-shrink-0 relative shadow-inner">
-                <div className="absolute inset-0 rounded-2xl bg-teal-500/10 animate-ping opacity-60 pointer-events-none" />
+              <div className="w-11 h-11 bg-white/15 border border-white/20 rounded-2xl flex items-center justify-center text-white flex-shrink-0 relative shadow-inner">
+                <div className="absolute inset-0 rounded-2xl bg-white/10 animate-ping opacity-60 pointer-events-none" />
                 <Mic className="w-5 h-5 animate-pulse" />
               </div>
               <div className="text-left min-w-0">
-                <span className="text-[9px] font-black text-teal-400 uppercase tracking-widest block leading-none">Voice Assistant Active</span>
+                <span className="text-[9px] font-black text-teal-100 uppercase tracking-widest block leading-none">Voice Assistant Active</span>
                 <p className="text-sm font-extrabold text-white mt-1 leading-tight tracking-wide italic truncate">
                   "Hey Pillmate, did I take my Metformin?"
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-1.5 flex-shrink-0 bg-teal-500/10 px-2.5 py-1 rounded-full border border-teal-500/20">
+            <div className="flex items-center gap-1.5 flex-shrink-0 bg-white/15 px-2.5 py-1 rounded-full border border-white/20">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-teal-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
               </span>
-              <span className="text-[9px] font-black text-teal-400 uppercase tracking-widest">Speak</span>
+              <span className="text-[9px] font-black text-white uppercase tracking-widest">Speak</span>
             </div>
           </div>
         </div>
@@ -290,59 +293,57 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ med, onToggle }) => {
 
   return (
     <div 
-      className={`p-3.5 rounded-2xl border transition-all flex items-center justify-between ${
+      className={`p-4 sm:p-5 rounded-2xl border transition-all flex items-center justify-between gap-4 ${
         isTaken
-          ? 'bg-teal-50/20 border-teal-100/60 shadow-sm'
-          : 'bg-white border-slate-200/50 hover:border-slate-300'
+          ? 'bg-teal-50/10 border-teal-100/50 shadow-sm'
+          : 'bg-white border-slate-200/80 hover:border-teal-500 hover:shadow-md shadow-sm'
       }`}
     >
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-4 flex-1 min-w-0">
         {/* Checkbox Trigger */}
         <button 
           onClick={onToggle}
-          className={`w-5.5 h-5.5 rounded-full border flex items-center justify-center transition-all ${
+          className={`w-6 h-6 rounded-full border flex items-center justify-center transition-all flex-shrink-0 ${
             isTaken
-              ? 'bg-teal-600 border-teal-600 text-white shadow-md shadow-teal-100'
-              : 'border-slate-300 bg-white hover:border-teal-500'
+              ? 'bg-teal-600 border-teal-600 text-white shadow-md shadow-teal-100/60'
+              : 'border-slate-355 bg-white hover:border-teal-500 shadow-sm'
           }`}
         >
-          {isTaken && <Check className="w-3.5 h-3.5 stroke-[3]" />}
+          {isTaken && <Check className="w-4 h-4 stroke-[3.5]" />}
         </button>
 
         {/* Text Details */}
-        <div className="text-left">
-          <div className="flex items-center gap-1.5">
-            <h6 className={`text-xs font-bold ${
-              isTaken ? 'text-slate-400 line-through' : 'text-slate-800'
+        <div className="flex-1 min-w-0 text-left">
+          <div className="flex items-center gap-2 flex-wrap">
+            <h6 className={`text-sm sm:text-base font-extrabold ${
+              isTaken ? 'text-slate-400 line-through' : 'text-slate-900'
             }`}>
               {med.name}
             </h6>
-            <span className="text-[9px] font-bold text-slate-400">({med.dosage})</span>
+            <span className="text-xs font-bold text-slate-500 flex-shrink-0">({med.dosage})</span>
             {med.slot && (
-              <span className={`text-[8px] font-extrabold px-1.5 py-0.5 rounded border leading-none ${
-                isTaken ? 'bg-slate-50 border-slate-100 text-slate-400' : 'bg-teal-50 border-teal-100/30 text-teal-700'
+              <span className={`text-[10px] font-bold px-2 py-0.5 rounded-lg border leading-none flex-shrink-0 ${
+                isTaken ? 'bg-slate-50 border-slate-100 text-slate-400' : 'bg-teal-50 border-teal-100 text-teal-855'
               }`}>
                 Slot {med.slot}
               </span>
             )}
           </div>
           
-          <div className="flex items-center gap-1 text-[10px] text-slate-400 mt-0.5 font-medium">
-            <span>{med.time}</span>
-            <span>•</span>
-            <span>{med.instructions}</span>
-          </div>
+          <p className="text-xs sm:text-sm text-slate-500 mt-1 font-semibold leading-normal">
+            {med.time} <span className="mx-1 text-slate-350 font-normal">•</span> {med.instructions}
+          </p>
         </div>
       </div>
 
-      <div>
+      <div className="flex-shrink-0">
         {isTaken ? (
-          <span className="text-[9px] font-extrabold text-teal-600 bg-teal-50 px-2 py-0.5 rounded border border-teal-100/40">
+          <span className="text-[10px] sm:text-xs font-black text-teal-700 bg-teal-50 px-2.5 py-1 rounded-lg border border-teal-200 whitespace-nowrap">
             Taken {med.timeTaken}
           </span>
         ) : (
-          <Link to="/prescription/verify" className="text-slate-300 hover:text-slate-500 transition-colors p-1">
-            <ChevronRight className="w-4 h-4" />
+          <Link to="/prescription/verify" className="text-slate-400 hover:text-teal-600 transition-colors p-1.5 block">
+            <ChevronRight className="w-5 h-5" />
           </Link>
         )}
       </div>

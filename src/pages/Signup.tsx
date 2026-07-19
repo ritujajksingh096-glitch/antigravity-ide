@@ -79,70 +79,70 @@ export const Signup: React.FC = () => {
         <div className="space-y-6 pt-4">
           {/* Title */}
           <div className="space-y-1.5 text-center md:text-left">
-            <h2 className="text-xl md:text-2xl font-black font-sans text-teal-900 tracking-tight">Create Account</h2>
-            <p className="text-xs text-slate-500 font-medium">Join our family to simplify medication routines and ensure safety.</p>
+            <h2 className="text-2xl md:text-3xl font-black font-sans text-teal-900 tracking-tight leading-tight">Create Account</h2>
+            <p className="text-xs sm:text-sm text-slate-500 font-semibold leading-relaxed">Join our family to simplify medication routines and ensure safety.</p>
           </div>
 
           {/* Form */}
-          <form onSubmit={handleSubmit} className="space-y-3.5">
-            <div className="space-y-1">
-              <label className="text-[9px] font-bold text-slate-400 uppercase tracking-wider block">Full Name</label>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="space-y-1.5">
+              <label className="text-xs font-bold text-slate-500 uppercase tracking-wider block">Full Name</label>
               <input 
                 type="text" 
                 placeholder="Enter your full name" 
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-xs font-semibold focus:outline-none focus:border-teal-500 transition-all bg-slate-50/50"
+                className="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm font-semibold focus:outline-none focus:border-teal-500 transition-all bg-slate-50/50"
                 required
               />
             </div>
 
-            <div className="space-y-1">
-              <label className="text-[9px] font-bold text-slate-400 uppercase tracking-wider block">Email</label>
+            <div className="space-y-1.5">
+              <label className="text-xs font-bold text-slate-500 uppercase tracking-wider block">Email</label>
               <input 
                 type="email" 
                 placeholder="name@example.com" 
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-xs font-semibold focus:outline-none focus:border-teal-500 transition-all bg-slate-50/50"
+                className="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm font-semibold focus:outline-none focus:border-teal-500 transition-all bg-slate-50/50"
                 required
               />
             </div>
 
-            <div className="space-y-1">
-              <label className="text-[9px] font-bold text-slate-400 uppercase tracking-wider block">Mobile Number</label>
+            <div className="space-y-1.5">
+              <label className="text-xs font-bold text-slate-500 uppercase tracking-wider block">Mobile Number</label>
               <input 
                 type="tel" 
                 placeholder="+1 (555) 000-0000" 
                 value={mobile}
                 onChange={(e) => setMobile(e.target.value)}
-                className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-xs font-semibold focus:outline-none focus:border-teal-500 transition-all bg-slate-50/50"
+                className="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm font-semibold focus:outline-none focus:border-teal-500 transition-all bg-slate-50/50"
                 required
               />
             </div>
 
-            <div className="space-y-1">
-              <label className="text-[9px] font-bold text-slate-400 uppercase tracking-wider block">Password</label>
+            <div className="space-y-1.5">
+              <label className="text-xs font-bold text-slate-500 uppercase tracking-wider block">Password</label>
               <input 
                 type="password" 
                 placeholder="Create a strong password" 
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-xs font-semibold focus:outline-none focus:border-teal-500 transition-all bg-slate-50/50"
+                className="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm font-semibold focus:outline-none focus:border-teal-500 transition-all bg-slate-50/50"
                 required
               />
             </div>
 
             <div className="flex items-start gap-2 pt-1 text-left">
               <input type="checkbox" id="terms" className="mt-1 rounded text-teal-600 focus:ring-teal-500" required />
-              <label htmlFor="terms" className="text-[10px] text-slate-500 leading-normal font-medium">
+              <label htmlFor="terms" className="text-xs text-slate-600 leading-normal font-semibold">
                 By creating an account, you agree to our Terms of Service & Privacy Policy.
               </label>
             </div>
 
             <button 
               type="submit" 
-              className="w-full bg-teal-600 hover:bg-teal-700 active:bg-teal-800 text-white font-bold py-3.5 px-6 rounded-2xl shadow-lg shadow-teal-100 transition-all text-xs mt-1"
+              className="w-full bg-teal-600 hover:bg-teal-700 active:bg-teal-800 text-white font-bold py-3.5 px-6 rounded-2xl shadow-lg shadow-teal-100 transition-all text-sm mt-1"
             >
               Sign Up
             </button>
@@ -152,16 +152,16 @@ export const Signup: React.FC = () => {
           <div className="space-y-3">
             <div className="relative flex items-center">
               <div className="flex-grow border-t border-slate-100"></div>
-              <span className="flex-shrink mx-3 text-[10px] text-slate-400 font-semibold">Or sign up with</span>
+              <span className="flex-shrink mx-3 text-xs text-slate-500 font-bold">Or sign up with</span>
               <div className="flex-grow border-t border-slate-100"></div>
             </div>
 
             <div className="grid grid-cols-2 gap-3">
-              <button className="flex items-center justify-center gap-1.5 border border-slate-200 hover:bg-slate-50 py-2 px-3 rounded-xl transition-all text-xs font-bold text-slate-700">
+              <button className="flex items-center justify-center gap-1.5 border border-slate-200 hover:bg-slate-50 py-2.5 px-3 rounded-xl transition-all text-sm font-bold text-slate-700">
                 <svg className="w-4 h-4" viewBox="0 0 24 24"><path fill="currentColor" d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.75.8-.01 1.99-.77 3.55-.63 1.6.14 2.81.76 3.49 1.83-3.28 1.96-2.76 6.35.03 7.57-.69 1.63-1.61 3.25-2.15 3.45zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.51-3.74 4.25z"/></svg>
                 <span>Apple</span>
               </button>
-              <button className="flex items-center justify-center gap-1.5 border border-slate-200 hover:bg-slate-50 py-2 px-3 rounded-xl transition-all text-xs font-bold text-slate-700">
+              <button className="flex items-center justify-center gap-1.5 border border-slate-200 hover:bg-slate-50 py-2.5 px-3 rounded-xl transition-all text-sm font-bold text-slate-700">
                 <svg className="w-5 h-5" viewBox="0 0 24 24"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 1.56-1.56 2.95-3.24 3.5v2.9h5.22c3.05-2.81 4.81-6.95 4.81-11.83c0-.62-.06-1.2-.13-1.7z" fill="#4285F4"/><path d="M12.18 20.36c2.72 0 5-.9 6.66-2.43l-5.22-2.91c-1.46.99-3.32 1.48-5.2 1.05c-3-1.01-5.17-3.7-5.59-6.84H.57v3c1.94 3.86 5.86 6.36 10.37 6.36z" fill="#34A853"/><path d="M6.82 14.23a6.83 6.83 0 0 1 0-4.3l-6.25-3a11.9 11.9 0 0 0 0 10.3l6.25-3z" fill="#FBBC05"/><path d="M12.18 5.7c1.48 0 2.82.51 3.87 1.51l2.9-2.9A11.9 11.9 0 0 0 .57 7.32l6.25 3c.42-3.14 2.59-5.83 5.59-6.84z" fill="#EA4335"/></svg>
                 <span>Google</span>
               </button>
@@ -170,9 +170,9 @@ export const Signup: React.FC = () => {
         </div>
 
         <div className="text-center pt-6 border-t border-slate-50 mt-6 bg-white">
-          <p className="text-xs text-slate-500 font-semibold">
+          <p className="text-xs sm:text-sm text-slate-500 font-semibold">
             Already have an account?{' '}
-            <button onClick={() => navigate('/login')} className="font-extrabold text-teal-655 hover:underline">
+            <button onClick={() => navigate('/login')} className="font-extrabold text-teal-600 hover:underline">
               Log In
             </button>
           </p>

@@ -75,17 +75,17 @@ export const OtpVerify: React.FC = () => {
           </div>
         </div>
 
-        <div className="space-y-8 pt-4 text-center md:text-left">
+        <div className="space-y-6 pt-4 text-center md:text-left">
           {/* Title */}
           <div className="space-y-2">
-            <h2 className="text-xl md:text-2xl font-black font-sans text-teal-900 tracking-tight">Verify Code</h2>
-            <p className="text-xs text-slate-500 max-w-[260px] mx-auto md:mx-0 leading-relaxed font-medium">
+            <h2 className="text-2xl md:text-3xl font-black font-sans text-teal-900 tracking-tight leading-tight">Verify Code</h2>
+            <p className="text-xs sm:text-sm text-slate-500 max-w-[280px] mx-auto md:mx-0 leading-relaxed font-semibold">
               Enter the 4-digit code sent to your registered mobile number or email address.
             </p>
           </div>
 
           {/* OTP Input Fields */}
-          <form onSubmit={handleVerify} className="space-y-8 max-w-[280px] mx-auto md:mx-0 w-full">
+          <form onSubmit={handleVerify} className="space-y-6 max-w-[280px] mx-auto md:mx-0 w-full">
             <div className="flex justify-between gap-3">
               {digits.map((digit, index) => (
                 <input
@@ -96,23 +96,23 @@ export const OtpVerify: React.FC = () => {
                   ref={(el) => (inputsRef.current[index] = el)}
                   onChange={(e) => handleChange(index, e.target.value)}
                   onKeyDown={(e) => handleKeyDown(index, e)}
-                  className="w-13 h-13 border border-slate-200 rounded-2xl text-center text-xl font-bold text-slate-800 bg-slate-50 focus:bg-white focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all shadow-sm animate-pulse"
+                  className="w-12 h-12 sm:w-14 sm:h-14 border border-slate-200 rounded-2xl text-center text-xl font-bold text-slate-800 bg-slate-50 focus:bg-white focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 transition-all shadow-sm"
                   required
                 />
               ))}
             </div>
 
-            <div className="space-y-5">
+            <div className="space-y-4">
               <button 
                 type="submit" 
-                className="w-full bg-teal-600 hover:bg-teal-700 active:bg-teal-800 text-white font-bold py-3.5 px-6 rounded-2xl shadow-lg shadow-teal-100 transition-all text-xs"
+                className="w-full bg-teal-600 hover:bg-teal-700 active:bg-teal-800 text-white font-bold py-3.5 px-6 rounded-2xl shadow-lg shadow-teal-100 transition-all text-sm"
               >
                 Verify
               </button>
               
-              <p className="text-xs text-slate-400 font-semibold">
+              <p className="text-xs sm:text-sm text-slate-500 font-semibold">
                 Didn't receive the code?{' '}
-                <button type="button" className="font-extrabold text-teal-600 hover:underline">
+                <button type="button" className="font-extrabold text-teal-655 hover:underline">
                   Resend Code
                 </button>
               </p>

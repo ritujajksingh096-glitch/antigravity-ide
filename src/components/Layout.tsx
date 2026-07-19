@@ -21,7 +21,8 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
     '/prescription/add',
     '/weekly-report',
     '/ai-chat',
-    '/profile'
+    '/profile',
+    '/dispenser'
   ].includes(path);
 
   // Determine header navigation based on current page
@@ -58,6 +59,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
       case '/voice-verified': return "Voice Verified";
       case '/profile': return "Profile";
       case '/notification-alert': return "Adherence Alert";
+      case '/dispenser': return "Smart Dispenser Status";
       case '/search': return "Search";
       case '/medicine-taken': return "Medicine Taken";
       case '/login': return "Log In";
@@ -83,7 +85,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
   // For onboarding/auth, present a clean full screen page
   if (isOnboardingOrAuth) {
     return (
-      <div className="min-h-screen w-full flex flex-col bg-white overflow-y-auto">
+      <div className="h-screen w-full flex flex-col bg-white overflow-hidden">
         <main className="flex-1 flex flex-col">
           {children}
         </main>
@@ -92,7 +94,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
   }
 
   return (
-    <div className="min-h-screen w-full flex bg-slate-50 text-slate-800 font-sans overflow-hidden">
+    <div className="h-screen w-full flex bg-slate-50 text-slate-800 font-sans overflow-hidden">
       
       {/* 1. COLLAPSIBLE LEFT SIDEBAR NAVIGATION (Desktop Only: md and up) */}
       {showNav && (

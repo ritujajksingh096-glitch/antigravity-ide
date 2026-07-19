@@ -74,8 +74,8 @@ export const PatientProfileAdd: React.FC = () => {
           <div className="space-y-6">
             {/* Title Block */}
             <div className="text-center md:text-left space-y-1.5">
-              <h2 className="text-xl md:text-2xl font-black font-sans text-slate-900 tracking-tight">Add Patient Profile</h2>
-              <p className="text-xs text-slate-500">Provide medical context to personalize schedule suggestions.</p>
+              <h2 className="text-2xl md:text-3xl font-black font-sans text-slate-900 tracking-tight leading-tight">Add Patient Profile</h2>
+              <p className="text-xs sm:text-sm text-slate-500 font-semibold leading-relaxed">Provide medical context to personalize schedule suggestions.</p>
             </div>
 
             {/* Profile Picture Upload Mock */}
@@ -93,24 +93,24 @@ export const PatientProfileAdd: React.FC = () => {
             {/* Form Fields */}
             <div className="space-y-4">
               <div className="space-y-1.5">
-                <label className="text-[9px] font-bold text-slate-400 uppercase tracking-wider block">Full Name</label>
+                <label className="text-xs font-bold text-slate-500 uppercase tracking-wider block">Full Name</label>
                 <input 
                   type="text" 
                   placeholder="Sam Johnson" 
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-xs font-semibold focus:outline-none focus:border-teal-500 transition-all bg-slate-50/50"
+                  className="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm font-semibold focus:outline-none focus:border-teal-500 transition-all bg-slate-50/50"
                   required
                 />
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-1.5">
-                  <label className="text-[9px] font-bold text-slate-400 uppercase tracking-wider block">Gender</label>
+                  <label className="text-xs font-bold text-slate-500 uppercase tracking-wider block">Gender</label>
                   <select 
                     value={gender} 
                     onChange={(e: any) => setGender(e.target.value)}
-                    className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-xs font-semibold focus:outline-none focus:border-teal-500 bg-slate-50/50"
+                    className="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm font-semibold focus:outline-none focus:border-teal-500 bg-slate-50/50"
                   >
                     <option value="male">Male</option>
                     <option value="female">Female</option>
@@ -119,13 +119,13 @@ export const PatientProfileAdd: React.FC = () => {
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-[9px] font-bold text-slate-400 uppercase tracking-wider block">Birth Year</label>
+                  <label className="text-xs font-bold text-slate-500 uppercase tracking-wider block">Birth Year</label>
                   <input 
                     type="number" 
                     placeholder="1951" 
                     value={birthYear}
                     onChange={(e) => setBirthYear(e.target.value)}
-                    className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-xs font-semibold focus:outline-none focus:border-teal-500 transition-all bg-slate-50/50"
+                    className="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm font-semibold focus:outline-none focus:border-teal-500 transition-all bg-slate-50/50"
                     required
                   />
                 </div>
@@ -133,17 +133,17 @@ export const PatientProfileAdd: React.FC = () => {
 
               {/* Medical Conditions Selector */}
               <div className="space-y-2">
-                <label className="text-[9px] font-bold text-slate-400 uppercase tracking-wider block">Medical Conditions (Optional)</label>
-                <div className="flex flex-wrap gap-1.5">
+                <label className="text-xs font-bold text-slate-500 uppercase tracking-wider block">Medical Conditions (Optional)</label>
+                <div className="flex flex-wrap gap-2">
                   {availableConditions.map(condition => (
                     <button
                       type="button"
                       key={condition}
                       onClick={() => toggleCondition(condition)}
-                      className={`px-3 py-1.5 rounded-full text-xs font-bold border transition-all ${
+                      className={`px-3 py-1.5 rounded-full text-xs sm:text-sm font-extrabold border transition-all ${
                         conditions.includes(condition) 
-                          ? 'border-teal-600 bg-teal-50 text-teal-700' 
-                          : 'border-slate-200 bg-white text-slate-655 hover:border-slate-350'
+                          ? 'border-teal-600 bg-teal-50 text-teal-800' 
+                          : 'border-slate-200 bg-white text-slate-600 hover:border-slate-350'
                       }`}
                     >
                       {condition}
@@ -157,7 +157,7 @@ export const PatientProfileAdd: React.FC = () => {
           <div className="pt-4 pb-2">
             <button 
               type="submit" 
-              className="w-full bg-teal-600 hover:bg-teal-700 active:bg-teal-800 text-white font-bold py-3.5 px-6 rounded-2xl shadow-lg shadow-teal-100 transition-all text-xs"
+              className="w-full bg-teal-600 hover:bg-teal-700 active:bg-teal-800 text-white font-bold py-3.5 px-6 rounded-2xl shadow-lg shadow-teal-100 transition-all text-sm"
             >
               Create Profile
             </button>

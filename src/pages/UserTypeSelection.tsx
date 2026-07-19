@@ -71,7 +71,7 @@ export const UserTypeSelection: React.FC = () => {
             {/* Patient Card */}
             <div 
               onClick={() => setSelectedType('patient')}
-              className={`p-5 rounded-3xl border-2 cursor-pointer flex gap-4.5 items-center transition-all shadow-sm ${
+              className={`p-5 rounded-3xl border-2 cursor-pointer flex gap-4 items-center transition-all shadow-sm ${
                 selectedType === 'patient' 
                   ? 'border-teal-600 bg-white scale-[1.01] shadow-lg shadow-teal-500/5' 
                   : 'border-slate-200/60 bg-white/60 hover:bg-white hover:scale-[1.005]'
@@ -82,19 +82,19 @@ export const UserTypeSelection: React.FC = () => {
               }`}>
                 <User className="w-5.5 h-5.5" />
               </div>
-              <div className="flex-grow text-left">
+              <div className="flex-1 min-w-0 text-left">
                 <div className="flex justify-between items-center">
-                  <h3 className="text-sm font-black text-slate-800">Patient</h3>
+                  <h3 className="text-sm sm:text-base font-black text-slate-800">Patient</h3>
                   {selectedType === 'patient' && <CheckCircle2 className="w-4 h-4 text-teal-600" />}
                 </div>
-                <p className="text-[10px] md:text-xs text-slate-400 font-semibold mt-1 leading-relaxed">I am tracking my own medications and health routines.</p>
+                <p className="text-xs sm:text-sm text-slate-500 font-semibold mt-1 leading-relaxed">I am tracking my own medications and health routines.</p>
               </div>
             </div>
 
             {/* Caregiver Card */}
             <div 
               onClick={() => setSelectedType('caregiver')}
-              className={`p-5 rounded-3xl border-2 cursor-pointer flex gap-4.5 items-center transition-all shadow-sm ${
+              className={`p-5 rounded-3xl border-2 cursor-pointer flex gap-4 items-center transition-all shadow-sm ${
                 selectedType === 'caregiver' 
                   ? 'border-teal-600 bg-white scale-[1.01] shadow-lg shadow-teal-500/5' 
                   : 'border-slate-200/60 bg-white/60 hover:bg-white hover:scale-[1.005]'
@@ -105,12 +105,12 @@ export const UserTypeSelection: React.FC = () => {
               }`}>
                 <Users className="w-5.5 h-5.5" />
               </div>
-              <div className="flex-grow text-left">
+              <div className="flex-1 min-w-0 text-left">
                 <div className="flex justify-between items-center">
-                  <h3 className="text-sm font-black text-slate-800">Caregiver</h3>
+                  <h3 className="text-sm sm:text-base font-black text-slate-800">Caregiver</h3>
                   {selectedType === 'caregiver' && <CheckCircle2 className="w-4 h-4 text-teal-600" />}
                 </div>
-                <p className="text-[10px] md:text-xs text-slate-400 font-semibold mt-1 leading-relaxed">I am helping a family member or friend manage their health.</p>
+                <p className="text-xs sm:text-sm text-slate-500 font-semibold mt-1 leading-relaxed">I am helping a family member or friend manage their health.</p>
               </div>
             </div>
           </div>
@@ -119,7 +119,7 @@ export const UserTypeSelection: React.FC = () => {
         <div className="pb-2 pt-8">
           <button 
             onClick={() => navigate('/device-connect')} 
-            className="w-full bg-teal-600 hover:bg-teal-700 active:bg-teal-800 text-white font-bold py-3.5 px-6 rounded-2xl shadow-lg shadow-teal-500/10 transition-all text-xs"
+            className="w-full bg-teal-600 hover:bg-teal-700 active:bg-teal-800 text-white font-bold py-3.5 px-6 rounded-2xl shadow-lg shadow-teal-505 transition-all text-sm"
           >
             Continue
           </button>
