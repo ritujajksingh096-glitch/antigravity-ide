@@ -82,24 +82,6 @@ PillMate follows a compact cylindrical bedside design with a transparent UV-prot
 
 ---
 
-## 📋 Core Components & Prototype Cost Estimates
-
-The prototype is designed with a simple modular architecture using commonly available components:
-
-| Component | Purpose / Description | Qty | Estimated Cost (INR) |
-| :--- | :--- | :---: | :---: |
-| **ESP32 Microcontroller** | Device control, Wi-Fi & Bluetooth connectivity | 1 | ₹250 |
-| **Servo Motors** | Automatic rotary tray pill dispensing | 2 | ₹300 |
-| **Speaker Module** | Play voice alerts & custom remind beeps | 1 | ₹100 |
-| **LED Strip** | Ambient lighting rings & visual guidance | 1 | ₹120 |
-| **Rechargeable Battery** | Li-ion battery + USB-C power circuit | 1 | ₹250 |
-| **UV Polycarbonate Chamber** | Medicine storage protecting light-sensitive pills | 1 | ₹180 |
-| **IR Sensors** | Exit nozzle drop detection and tray level monitoring | 2 | ₹100 |
-| **Internal Mechanicals** | Funnels, rotating tray gates, and guiding channels | 1 set | ₹400 |
-| **TOTAL PROTOTYPE COST** | **Estimated physical hardware cost** | | **₹1500 - ₹2500** |
-
----
-
 ## 📈 Future Scope & Growth Strategy
 
 ### Short-Term
