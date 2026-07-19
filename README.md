@@ -90,7 +90,6 @@ PillMate follows a compact cylindrical bedside design with a transparent UV-prot
 
 ### Long-Term
 * **Wearable Health Sync:** Integrate with fitness bands and smartwatches (such as Fitbit/Apple Watch) to map heart rate, sleep quality, and medication adherence profiles.
-* **AI Health Analytics:** Predict disease flare-ups by analyzing correlation profiles between medication adherence deviations and vital wearable metrics.
 
 ---
 
